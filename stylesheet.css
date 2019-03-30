@@ -1,0 +1,76 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Imported Fonts */
+@font-face {
+  font-family: Title;
+  src: url(fonts/title.ttf);
+}
+
+@font-face {
+  font-family: Paragraphs;
+  src: url(fonts/text.otf);
+}
+
+
+/* Welcomepage */
+
+#Welcome { /* Body of Welcomepage*/
+  background-image: url(images/background.gif);
+  background-size: cover;
+  display: flex;
+  flex-flow: row;
+}
+.write {
+  padding-left: 5px;
+  height: 100vh;
+  width: 25vw;
+  background-color: white;
+}
+.space {
+  align-self: flex-end;
+  height: 100vh;
+	width: 100vw;
+}
+
+
+/* Homepage */
+#Homepage { /* Body of Homepage*/
+  background-image: url("images/homeback.png");
+  background-size: cover;
+  display: flex;
+  flex-flow: row;
+  padding-left: 20px;
+}
+
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+
+
+/* Texts */
+#title {
+  font-family: Title;
+  font-size: 60px;
+  color: #FF9E9E;
+}
+#text {
+  font-family: Paragraphs;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  font-family: Paragraphs;
+  list-style-type: none;
+  font-size: 25px;
+}

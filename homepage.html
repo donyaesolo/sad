@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homepage</title>
+    <link href = "stylesheet.css" rel = "stylesheet">
+    <audio src = ""  id = "audioPlayer">
+    </audio>
+  </head>
+  <body id = "Homepage">
+      <div class="write" id = "div">
+        <h1 id = "title"> Choose a theme </h1>
+        <ul id = "theme">
+          <li onclick = "audioPlayer()" id = "SA"> Spirited Away</li>
+          <br />
+          <li onclick = "totoroTheme()" id = "NT"> My Neighbor Totoro</li>
+          <br />
+          <li onclick = "castleTheme()" id = "CS"> Castle in the Sky </li>
+          <br />
+          <li onclick = "lofiTheme()" id = "LF"> Lo-fi </li>
+        </ul>
+      </div>
+      <div class = "space">
+      </div>
+      <audio loop src = "sounds/loFiTheme.mp3" type="audio/mp3" id = "lo-fi"></audio><!-- You'll Say Sorry Through Your Smile -->
+      <audio loop src = "sounds/totoroTheme.mp3" type="audio/mp3" id = "totoro"></audio><!-- Wind Forest -->
+      <audio loop src = "sounds/castelTheme.mp3" type="audio/mp3" id = "castle"></audio><!-- Carrying You -->
+  </body>
+  <!-- Background Music Playlist for Spirited Away-->
+  <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script src ="script.js"></script>
+  <ul id = "playlist">
+    <li><a href = "sounds/spiritedAway.mp3"></a></li><!-- Name of Life -->
+    <li class = "current-song"><a href = "sounds/Chihiro.mp3"></a></li><!-- Chihiro Waltze -->
+  </ul>
+</html>

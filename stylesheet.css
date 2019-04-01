@@ -9,7 +9,10 @@ html, body {
   font-family: Title;
   src: url(fonts/title.ttf);
 }
-
+@font-face {
+  font-family: Relax;
+  src: url(fonts/relax.ttf);
+}
 @font-face {
   font-family: Paragraphs;
   src: url(fonts/text.otf);
@@ -52,7 +55,11 @@ html, body {
 .show {
   display: block;
 }
-
+.center-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 
 /* Texts */
@@ -61,6 +68,14 @@ html, body {
   font-size: 60px;
   color: #FF9E9E;
 }
+#relax {
+  display: none;
+  font-family: Relax;
+  font-size: 200px;
+  color: white;
+}
+.fade-in{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.slow-fade-in{animation:opac 2s}@keyframes opac{from{opacity:0} to{opacity:1}}
 #text {
   font-family: Paragraphs;
 }

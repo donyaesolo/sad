@@ -146,12 +146,53 @@ function lofiTheme(){
   if(playing == true) {
     var sounds = document.getElementsByTagName('audio');
     for(i=0; i<sounds.length; i++) sounds[i].pause();
-    sounds.currentTime = 0;
-    loFi.play();
-    check = 1;
-  }
     playing = true;
-    loFi.play();
+    playing = 1;
+    var currentSong = 0;
+    $("#audioPlayer")[0].src = $("#loPlaylist li a")[1];
+    $("#audioPlayer")[0].play();
+    $("#loPlaylist li a").click(function(e){
+       e.preventDefault();
+       $("#loPlaylist")[0].src = this;
+       $("#loPlaylist")[0].play();
+       $("#playlist li").removeClass("current-song");
+        currentSong = $(this).parent().index();
+        $(this).parent().addClass("current-song");
+    });
+
+    $("#audioPlayer")[0].addEventListener("ended", function(){
+       currentSong++;
+        if(currentSong == $("#loPlaylist li a").length)
+            currentSong = 0;
+        $("#loPlaylist li").removeClass("current-song");
+        $("#loPlaylist li:eq("+currentSong+")").addClass("current-song");
+        $("#audioPlayer")[0].src = $("#loPlaylist li a")[currentSong].href;
+        $("#audioPlayer")[0].play();
+    });
+  } else {
+    playing = true;
+    var currentSong = 0;
+    $("#audioPlayer")[0].src = $("#loPlaylist li a")[0];
+    $("#audioPlayer")[0].play();
+    $("#playlist li a").click(function(e){
+       e.preventDefault();
+       $("#audioPlayer")[0].src = this;
+       $("#audioPlayer")[0].play();
+       $("#loPlaylist li").removeClass("current-song");
+        currentSong = $(this).parent().index();
+        $(this).parent().addClass("current-song");
+    });
+
+    $("#audioPlayer")[0].addEventListener("ended", function(){
+       currentSong++;
+        if(currentSong == $("#playlist li a").length)
+            currentSong = 0;
+        $("#loPlaylist li").removeClass("current-song");
+        $("#loPlaylist li:eq("+currentSong+")").addClass("current-song");
+        $("#audioPlayer")[0].src = $("#loPlaylist li a")[currentSong].href;
+        $("#audioPlayer")[0].play();
+    });
+  }
     loFiTheme.style.color = "#FFD75B";
     castelTheme.style.color = "white";
     nTotoroTheme.style.color = "white";

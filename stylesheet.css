@@ -88,4 +88,110 @@ ul {
   font-family: Paragraphs;
   list-style-type: none;
   font-size: 25px;
+  padding-left: 0px;
+}
+
+
+/* Mobile Versions */
+
+/* Extra small devices (phones) */
+@media only screen and (max-width: 414px) {
+  #Welcome { /* Body of Welcomepage*/
+    background-image: url("images/background.gif");
+    background-position: center;
+    display: flex;
+    flex-flow: row;
+  }
+  .write {
+    padding-left: 5px;
+    height: 100vh;
+    width: 40vw;
+    background-color: white;
+  }
+  .space {
+    align-self: flex-end;
+    height: 100vh;
+  	width: 60vw;
+    text-align: center;
+  }
+
+  #title {
+    font-family: Title;
+    font-size: 30px;
+    color: #FF9E9E;
+  }
+  #text {
+    font-family: Paragraphs;
+    font-size: 20px;
+  }
+}
+
+
+  #Homepage { /* Body of Homepage*/
+    background-image: url("images/homeback.png");
+    background-position: center;
+    display: flex;
+    flex-flow: row;
+    padding-left: 20px;
+  }
+
+  #relax {
+    display: none;
+    font-family: Relax;
+    font-size: 100px;
+    color: white;
+  }
+/* Small devices (tablets and computers) */
+@media only screen and (min-width: 1024px) {
+    #Welcome { /* Body of Welcomepage*/
+      background-image: url("images/background.gif");
+      background-position: center;
+      display: flex;
+      flex-flow: row;
+    }
+    .write {
+      padding-left: 5px;
+      height: 100vh;
+      width: 40vw;
+    }
+    .space {
+      align-self: flex-end;
+      height: 100vh;
+    	width: 60vw;
+      text-align: center;
+    }
+
+    #title {
+      font-family: Title;
+      font-size: 80px;
+      color: #FF9E9E;
+    }
+    #text {
+      font-family: Paragraphs;
+      font-size: 60px;
+    }
+    ul {
+      font-family: Paragraphs;
+      list-style-type: none;
+      font-size: 60px;
+      padding-left: 0px;
+    }
+  }
+
+
+    #Homepage { /* Body of Homepage*/
+      background-image: url("images/homeback.png");
+      background-position: center;
+      display: flex;
+      flex-flow: row;
+      padding-left: 20px;
+    }
+
+    #relax {
+      display: none;
+      font-family: Relax;
+      font-size: 100px;
+      color: white;
+    }
+
 }
